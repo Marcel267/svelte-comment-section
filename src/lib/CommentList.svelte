@@ -1,9 +1,8 @@
 <script lang="ts">
-  import CommentCard from "./CommentCard.svelte";
-  import { CommentStore } from "../stores";
+	import Comment from "./Comment.svelte";
+	import { CommentStore } from "../stores";
 </script>
 
 {#each $CommentStore as comment (comment.id)}
-  {comment.id} - {comment.content} 
+	<Comment {comment} />
 {/each}
-<CommentCard />
