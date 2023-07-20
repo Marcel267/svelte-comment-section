@@ -20,7 +20,7 @@
 	</button> -->
 
 	<button class="p-3">
-		<img src="../../public/assets/images/icon-plus.svg" alt="Plus" />
+		<img src="../assets/images/icon-plus.svg" alt="Plus" />
 	</button>
 	<span
 		class="inline-flex min-w-[25px] justify-center font-medium text-moderate-blue"
@@ -28,6 +28,6 @@
 		{score}
 	</span>
 	<button class="p-3">
-		<img src="../../public/assets/images/icon-minus.svg" alt="Minus" />
+		<img src="../assets/images/icon-minus.svg" alt="Minus" />
 	</button>
 </div>
