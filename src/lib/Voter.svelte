@@ -1,9 +1,9 @@
 <script lang="ts">
-	export let score: number = 0;
+  export let score: number = 0;
 </script>
 
 <div
-	class="flex h-10 items-center justify-around rounded-l-lg rounded-r-lg bg-very-light-gray"
+  class="flex h-10 items-center justify-around rounded-l-lg rounded-r-lg bg-very-light-gray"
 >
 	<!-- <div class="rounded-l-lg rounded-r-lg bg-very-light-gray"> -->
 	<!-- <button class="inline-flex h-10 w-10 items-center justify-center bg-red-500">
