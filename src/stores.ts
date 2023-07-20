@@ -2,8 +2,8 @@ import { writable } from "svelte/store";
 
 export const UserStore = writable({
 	image: {
-		png: "../assets/images/avatars/image-juliusomo.png",
-		webp: "../assets/images/avatars/image-juliusomo.webp",
+		png: "./assets/images/avatars/image-juliusomo.png",
+		webp: "./assets/images/avatars/image-juliusomo.webp",
 	},
 	username: "juliusomo",
 });
@@ -17,8 +17,8 @@ export const CommentStore = writable([
 		score: 12,
 		user: {
 			image: {
-				png: "../assets/images/avatars/image-amyrobson.png",
-				webp: "../assets/images/avatars/image-amyrobson.webp",
+				png: "./assets/images/avatars/image-amyrobson.png",
+				webp: "./assets/images/avatars/image-amyrobson.webp",
 			},
 			username: "amyrobson",
 		},
@@ -32,8 +32,8 @@ export const CommentStore = writable([
 		score: 5,
 		user: {
 			image: {
-				png: "../assets/images/avatars/image-maxblagun.png",
-				webp: "../assets/images/avatars/image-maxblagun.webp",
+				png: "./assets/images/avatars/image-maxblagun.png",
+				webp: "./assets/images/avatars/image-maxblagun.webp",
 			},
 			username: "maxblagun",
 		},
@@ -47,8 +47,8 @@ export const CommentStore = writable([
 				replyingTo: "maxblagun",
 				user: {
 					image: {
-						png: "../assets/images/avatars/image-ramsesmiron.png",
-						webp: "../assets/images/avatars/image-ramsesmiron.webp",
+						png: "./assets/images/avatars/image-ramsesmiron.png",
+						webp: "./assets/images/avatars/image-ramsesmiron.webp",
 					},
 					username: "ramsesmiron",
 				},
@@ -62,8 +62,8 @@ export const CommentStore = writable([
 				replyingTo: "ramsesmiron",
 				user: {
 					image: {
-						png: "../assets/images/avatars/image-juliusomo.png",
-						webp: "../assets/images/avatars/image-juliusomo.webp",
+						png: "./assets/images/avatars/image-juliusomo.png",
+						webp: "./assets/images/avatars/image-juliusomo.webp",
 					},
 					username: "juliusomo",
 				},

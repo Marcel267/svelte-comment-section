@@ -1,7 +1,7 @@
 import ghpages from 'gh-pages'
 
 ghpages.publish(
-    'public', // path to public directory
+    'dist', // path to public directory
     {
         branch: 'gh-pages',
         repo: 'https://github.com/Marcel267/svelte-comment-section.git', // Update to point to your repository  
