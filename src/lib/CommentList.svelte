@@ -3,6 +3,6 @@
 	import { CommentStore } from "../stores";
 </script>
 
-{#each $CommentStore as comment (comment.id)}
-	<Comment {comment} />
+{#each $CommentStore as item (item.id)}
+	<Comment {item} />
 {/each}

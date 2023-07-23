@@ -1,6 +1,6 @@
-import { writable } from "svelte/store";
+import { readable, writable } from "svelte/store";
 
-export const UserStore = writable({
+export const UserStore = readable({
 	image: {
 		png: "./assets/images/avatars/image-juliusomo.png",
 		webp: "./assets/images/avatars/image-juliusomo.webp",
@@ -8,7 +8,7 @@ export const UserStore = writable({
 	username: "juliusomo",
 });
 
-export const CommentStore = writable([
+export const CommentStore = readable([
 	{
 		id: 1,
 		content:

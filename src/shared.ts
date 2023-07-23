@@ -13,7 +13,7 @@ export interface UserComment {
 	replies: UserReply[];
 }
 
-interface UserReply {
+export interface UserReply {
 	id: number;
 	content: string;
 	createdAt: string;
