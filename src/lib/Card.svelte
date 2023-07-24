@@ -5,6 +5,11 @@
 	import GhostButton from "./GhostButton.svelte";
 
 	export let item: UserComment | UserReply;
+	// export let isComment: boolean;
+
+	const isComment = (item: UserComment | UserReply): item is UserReply => {
+		return 'replyingTo' in item;
+	}
 </script>
 
 <div class="mb-5 rounded-lg bg-white p-4">
@@ -14,9 +19,12 @@
 		<span class="text-grayish-blue">{item.createdAt}</span>
 	</div>
 	<p class="mb-4 text-grayish-blue">
-		<span>
-			{item instanceof UserComment ? item.replyingTo : ""}
-		</span>
+		{#if isComment(item)}
+		<!-- {#if isComment} -->
+			<span>
+				{item.replyingTo ? 'test' : ''}
+			</span>
+		{/if}
 		{item.content}
 	</p>
 	<div class="flex justify-between">
