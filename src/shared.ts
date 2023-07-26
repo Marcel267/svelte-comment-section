@@ -1,29 +1,30 @@
-export interface UserComment {
+export interface User {
+	image: {
+		png: string;
+		webp: string;
+	};
+	username: string;
+}
+
+export interface Comment {
 	id: number;
 	content: string;
 	createdAt: string;
 	score: number;
-	user: {
-		image: {
-			png: string;
-			webp: string;
-		};
-		username: string;
-	};
-	replies: UserReply[];
+	user: User;
+	replies: Reply[];
 }
 
-export interface UserReply {
+export interface Reply {
 	id: number;
 	content: string;
 	createdAt: string;
 	score: number;
 	replyingTo: string;
-	user: {
-		image: {
-			png: string;
-			webp: string;
-		};
-		username: string;
-	};
+	user: User;
+}
+
+export interface ButtonOptions {
+	primary: string;
+	ghost: string;
 }

@@ -14,9 +14,9 @@
 </script>
 
 <main class="min-h-screen bg-very-light-gray font-rubik">
-	<section class="container mx-auto px-4 py-6">
+	<section class="container mx-auto px-4 py-8">
 		<CommentList />
-		<!-- <CommentForm /> -->
+		<CommentForm />
 	</section>
 </main>
 

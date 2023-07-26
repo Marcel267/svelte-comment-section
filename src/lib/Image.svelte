@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	export let src: string, width: number;
+	export let src: string,
+		width: number = 32;
 
 	let loaded = false;
 	let failed = false;

@@ -1,22 +1,20 @@
 <script lang="ts">
-	// export let id: number, content: string, createdAt: string, score: number;
-	import type { UserComment, UserReply } from "../shared";
+	import type { Comment, Reply } from "../shared";
 	import Card from "./Card.svelte";
-	// import Replies from "./Replies.svelte";
 
-	export let item: UserComment | UserReply;
+	export let item: Comment | Reply;
 
-	const isComment = (item: UserComment | UserReply): item is UserReply => {
-		return 'replyingTo' in item;
-	}
+	const isComment = (item: Comment | Reply): item is Reply => {
+		return "replyingTo" in item;
+	};
 </script>
 
 <Card {item} />
 
 {#if !isComment(item)}
-	<!-- <Replies replies={item.replies} /> -->
-	{#each item.replies as reply (reply.id)}
-		<!-- <Card item={reply} isComment={isComment(item)} /> -->
-		<Card item={reply} />
-	{/each}
+	<div class="border-s-2 border-x-light-gray ps-4">
+		{#each item.replies as reply (reply.id)}
+			<Card item={reply} />
+		{/each}
+	</div>
 {/if}
