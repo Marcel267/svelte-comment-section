@@ -11,7 +11,7 @@
 	}
 </script>
 
-<div class="rounded-lg bg-white p-4 desktop:bg-very-light-gray">
+<div class="rounded-lg bg-white p-4">
 	<textarea
 		class="min-h-[90px] w-full resize-none rounded-md border-[1px] border-light-gray px-5 py-2 placeholder:text-grayish-blue"
 		placeholder="Add a comment..."
