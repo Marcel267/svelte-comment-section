@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CommentForm from "./lib/CommentForm.svelte";
-	import CommentList from "./lib/CommentList.svelte";
+	import Form from "./lib/Form.svelte";
+	import List from "./lib/List.svelte";
 
 	// if (
 	// 	localStorage.getItem("color-theme") === "dark" ||
@@ -14,9 +14,9 @@
 </script>
 
 <main class="min-h-screen bg-very-light-gray font-rubik">
-	<section class="container mx-auto px-4 py-8">
-		<CommentList />
-		<CommentForm />
+	<section class="container mx-auto max-w-3xl px-4 py-8 desktop:py-16">
+		<List />
+		<Form />
 	</section>
 </main>
 

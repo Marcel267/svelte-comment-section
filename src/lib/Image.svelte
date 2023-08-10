@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	export let src: string,
-		width: number = 32;
+		width: string = "w-8";
 
 	let loaded = false;
 	let failed = false;
@@ -24,16 +24,16 @@
 </script>
 
 {#if loaded}
-	<img {src} {width} alt="Document" />
+	<img {src} class={width + " " + $$restProps.class || ""} alt="Document" />
 {:else if failed}
 	<img
-		{width}
+		class={width + " " + $$restProps.class || ""}
 		src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg"
 		alt="Not Found"
 	/>
 {:else if loading}
 	<img
-		{width}
+		class={width + " " + $$restProps.class || ""}
 		src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
 		alt="Loading..."
 	/>

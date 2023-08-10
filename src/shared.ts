@@ -20,8 +20,8 @@ export interface Reply {
 	content: string;
 	createdAt: string;
 	score: number;
-	replyingTo: string;
 	user: User;
+	replyingTo: string;
 }
 
 export interface ButtonOptions {
