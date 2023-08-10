@@ -28,7 +28,7 @@
 			<Image width="w-12" src={$UserStore.image.png} />
 		</div>
 
-		<Button class="inline">SEND</Button>
+		<Button>SEND</Button>
 	</div>
 </div>
 
