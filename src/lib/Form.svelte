@@ -11,6 +11,7 @@
 	}
 </script>
 
+<!-- 
 <div class="rounded-lg bg-white p-4">
 	<textarea
 		class="min-h-[90px] w-full resize-none rounded-md border-[1px] border-light-gray px-5 py-2 placeholder:text-grayish-blue desktop:order-none"
@@ -30,16 +31,20 @@
 
 		<Button>SEND</Button>
 	</div>
-</div>
+</div> -->
 
-<!-- <div
-	class="flex flex-col-reverse rounded-lg bg-black bg-white p-4 desktop:flex-row"
+<div
+	class="flex flex-wrap justify-between rounded-lg bg-white p-4 desktop:gap-4"
 >
-	<div class="w-fit bg-red-300">
-		<Image width={50} src={$UserStore.image.png} />
+	<div class="flex w-fit items-center desktop:block desktop:flex-initial">
+		<Image
+			class="desktop:ml-2 desktop:mt-3 desktop:w-10"
+			src={$UserStore.image.png}
+		/>
 	</div>
+
 	<textarea
-		class="order-last min-h-[90px] w-full resize-none rounded-md border-[1px] border-light-gray bg-green-600 px-5 py-2 placeholder:text-grayish-blue desktop:order-none"
+		class="order-first mb-4 min-h-[90px] min-w-full resize-none rounded-md border-[1px] border-light-gray px-5 py-2 placeholder:text-grayish-blue desktop:order-none desktop:mb-0 desktop:min-w-fit desktop:flex-1"
 		placeholder="Add a comment..."
 		name="textarea"
 		id="textarea"
@@ -49,5 +54,7 @@
 		on:input={() => resizeTextarea(textareaElement)}
 	/>
 
-	<Button class="inline">SEND</Button>
-</div> -->
+	<!-- <div> -->
+	<Button>SEND</Button>
+	<!-- </div> -->
+</div>
