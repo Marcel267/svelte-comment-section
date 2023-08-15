@@ -12,8 +12,6 @@
 
 <div>
 	<button class={colors[option] + " " + $$restProps.class || ""}>
-		<!-- <span class={colors[option]}> -->
 		<slot />
-		<!-- </span> -->
 	</button>
 </div>
