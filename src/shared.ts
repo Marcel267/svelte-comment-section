@@ -26,5 +26,9 @@ export interface Reply {
 
 export interface ButtonOptions {
 	primary: string;
+	danger: string;
+	secondary: string;
 	ghost: string;
 }
+
+export type ButtonClickHandler = () => void;

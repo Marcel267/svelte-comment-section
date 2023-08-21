@@ -24,20 +24,20 @@
 			and can't be undone.
 		</p>
 		<!-- svelte-ignore a11y-autofocus -->
-		<div class="mt-4 flex justify-center gap-4">
-			<Button autofocus on:click={() => dialog.close()}>NO, CANCEL</Button>
-			<Button on:click={() => dialog.close()}>YES, DELETE</Button>
+		<div class="mt-4 flex justify-center gap-3 md:gap-4">
+			<Button
+				option="secondary"
+				autofocus
+				importedFunction={() => dialog.close()}>NO, CANCEL</Button
+			>
+			<Button option="danger" importedFunction={() => dialog.close()}
+				>YES, DELETE
+			</Button>
 		</div>
 	</div>
 </dialog>
 
 <style>
-	dialog {
-		/* max-width: 32em; */
-		/* border-radius: 0.2em; */
-		/* border: none; */
-		/* padding: 0; */
-	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
 	}
@@ -65,8 +65,5 @@
 		to {
 			opacity: 1;
 		}
-	}
-	button {
-		display: block;
 	}
 </style>

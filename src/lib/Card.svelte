@@ -4,17 +4,24 @@
 	import Voter from "./Voter.svelte";
 	import { UserStore } from "../stores";
 	import Button from "./Button.svelte";
+	import Modal from "../lib/Modal.svelte";
 
 	export let item: Comment | Reply;
+
+	let showModal = false;
 
 	const isReply = (item: Comment | Reply): item is Reply => {
 		return "replyingTo" in item;
 	};
 </script>
 
+<Modal bind:showModal />
 <div
 	class="relative mb-4 flex flex-col-reverse rounded-lg bg-white p-4 desktop:mb-6 desktop:flex-row"
 >
+	<!-- <button class="absolute" on:click={() => (showModal = true)}>
+        show modal
+    </button> -->
 	<div>
 		<Voter score={item.score} />
 	</div>
@@ -41,7 +48,11 @@
 			class="absolute bottom-6 right-4 flex justify-end gap-4 desktop:bottom-auto desktop:right-6 desktop:top-6 desktop:gap-6"
 		>
 			{#if item.user.username === $UserStore.username}
-				<Button option="ghost" class="text-soft-red">
+				<Button
+					importedFunction={() => (showModal = true)}
+					option="ghost"
+					class="text-soft-red"
+				>
 					<img src="./assets/images/icon-delete.svg" alt="Delete" />Delete
 				</Button>
 				<Button option="ghost" class="text-moderate-blue">
